@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitcamp 2019", "Bitcamp 2019.csproj", "{82F62F31-5755-BB4E-0D10-2BE97413DC8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitcamp 2019.Editor", "Bitcamp 2019.Editor.csproj", "{A6014FCD-4B2B-EDA7-F262-AE77CB85DBE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82F62F31-5755-BB4E-0D10-2BE97413DC8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82F62F31-5755-BB4E-0D10-2BE97413DC8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82F62F31-5755-BB4E-0D10-2BE97413DC8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82F62F31-5755-BB4E-0D10-2BE97413DC8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6014FCD-4B2B-EDA7-F262-AE77CB85DBE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6014FCD-4B2B-EDA7-F262-AE77CB85DBE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6014FCD-4B2B-EDA7-F262-AE77CB85DBE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6014FCD-4B2B-EDA7-F262-AE77CB85DBE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {919A4C10-663A-4E59-83D6-060A73D391F7}
+	EndGlobalSection
+EndGlobal
