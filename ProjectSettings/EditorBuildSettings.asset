@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: fb2eae3134bace548846a8aad4924067
   - enabled: 1
-    path: Assets/Scenes/Plot3D.unity
+    path: Assets/Scenes/Graph3D.unity
     guid: a18bd577c87a5674fafe909c217de2fe
   - enabled: 1
-    path: Assets/Scenes/VectorField.unity
+    path: Assets/Scenes/E&MVectorFieldIntro.unity
     guid: 0b50ad89b148b9d4f8da52113b975bea
   - enabled: 1
-    path: Assets/Scenes/VectorFields2.unity
+    path: Assets/Scenes/VectorFields.unity
     guid: e9623be37b2d9af4c9cafb9eeae16d31
   m_configObjects: {}

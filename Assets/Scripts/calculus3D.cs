@@ -432,7 +432,7 @@ public class calculus3D : MonoBehaviour
             for (int j = -5; j <= 5; j++) { //You may need to change this domain
                 for (int k = -5; k <= 5; k++) { //You may need to change this domain
                     Vector3 position = new Vector3(spacer*i,spacer*j,spacer*k);
-                    float Fx = stringyEvaluate3D("z*-y", i*spacer,j*spacer,k*spacer);
+                    float Fx = stringyEvaluate3D("z*(0-y)", i*spacer,j*spacer,k*spacer);
                     float Fy = stringyEvaluate3D("z*x", i*spacer,j*spacer,k*spacer);
                     float Fz = stringyEvaluate3D("0", i*spacer,j*spacer,k*spacer);
                     Vector3 direction = new Vector3(Fx,Fy,Fz);

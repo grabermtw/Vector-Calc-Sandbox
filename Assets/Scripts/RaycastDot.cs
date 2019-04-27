@@ -20,7 +20,12 @@ public class RaycastDot : MonoBehaviour
     {
         if (plot.Raycast(new Ray (transform.position, transform.forward), out hit, maxDist))
         {
+            pointer.GetComponent<LineRenderer>().enabled = true;
             pointer.transform.position = hit.point;
+        }
+        else
+        {
+            pointer.GetComponent<LineRenderer>().enabled = false;
         }
     }
 }

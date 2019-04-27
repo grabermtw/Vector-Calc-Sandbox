@@ -51,7 +51,7 @@ public class ParametricPlot : MonoBehaviour
             }
 
             v = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
-            Debug.Log("V " + v);
+            //Debug.Log("V " + v);
             omega = Mathf.Atan2(v.normalized.x, v.normalized.y);
             phi = omega - (Mathf.PI / 2);
             Domain = new Vector2(phi - swing, phi + swing);
@@ -72,7 +72,7 @@ public class ParametricPlot : MonoBehaviour
         for (int i = 0; i < n; i++)
         {
             float t = (i * beta);
-            Vector3 vert = new Vector3(R(t) * Mathf.Cos(t), calc.stringyEvaluate(func, plot.xDomain.x + R(t) * Mathf.Cos(t), plot.yDomain.x + R(t) * Mathf.Sin(t)) / plot.verticalScale, R(t) * Mathf.Sin(t));
+            Vector3 vert = new Vector3(R(t) * Mathf.Cos(t) * (plot.plotDimensions.x/ (2*Mathf.PI)), calc.stringyEvaluate(func, plot.xDomain.x + R(t) * Mathf.Cos(t), plot.yDomain.x + R(t) * Mathf.Sin(t)) / plot.verticalScale, R(t) * Mathf.Sin(t) * (plot.plotDimensions.y/ ((2 * Mathf.PI))));
 
             var seg = Instantiate(lineSegPF, vert, Quaternion.identity);
         }

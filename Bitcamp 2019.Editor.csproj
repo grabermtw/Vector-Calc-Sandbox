@@ -780,6 +780,7 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
+    <None Include="Assets\StandardNoCulling.shader" />
     <None Include="Assets\_MK\MKGlowFree\Legacy_3_0_7\ReadMe.txt" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Effect\MKGlowSM20.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shaders\Effect\MKGlowSM25.shader" />

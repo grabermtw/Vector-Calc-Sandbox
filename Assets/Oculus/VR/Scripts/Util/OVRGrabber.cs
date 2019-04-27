@@ -224,14 +224,21 @@ public class OVRGrabber : MonoBehaviour
             for (int j = 0; j < grabbable.grabPoints.Length; ++j)
             {
                 Collider grabbableCollider = grabbable.grabPoints[j];
-                // Store the closest grabbable
-                Vector3 closestPointOnBounds = grabbableCollider.ClosestPointOnBounds(m_gripTransform.position);
-                float grabbableMagSq = (m_gripTransform.position - closestPointOnBounds).sqrMagnitude;
-                if (grabbableMagSq < closestMagSq)
+                if (grabbableCollider != null)
                 {
-                    closestMagSq = grabbableMagSq;
-                    closestGrabbable = grabbable;
-                    closestGrabbableCollider = grabbableCollider;
+                    // Store the closest grabbable
+                    Vector3 closestPointOnBounds = grabbableCollider.ClosestPointOnBounds(m_gripTransform.position);
+                    float grabbableMagSq = (m_gripTransform.position - closestPointOnBounds).sqrMagnitude;
+                    if (grabbableMagSq < closestMagSq)
+                    {
+                        closestMagSq = grabbableMagSq;
+                        closestGrabbable = grabbable;
+                        closestGrabbableCollider = grabbableCollider;
+                    }
+                }
+                else
+                {
+                    Debug.Log("THHIS HERES A NULL");
                 }
             }
         }

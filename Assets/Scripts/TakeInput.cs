@@ -44,7 +44,7 @@ public class TakeInput : MonoBehaviour
         {
             GetExpr();
         }
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        if (OVRInput.GetDown(OVRInput.Button.Two))
         {
             PopBlock();
             UpdateBlocksArray();
@@ -262,6 +262,23 @@ public class TakeInput : MonoBehaviour
                     AddToExpr(thing[1].gameObject.tag, false);
                 }
                 digit = true;
+                //HANDLES ADDING * FOR DIGITS
+                if (i - 1 >= 0 && //don't go outta bounds boi
+
+                    (newCurrentBlocks[i - 1].CompareTag("x") ||
+                    newCurrentBlocks[i - 1].CompareTag("y") ||
+                    newCurrentBlocks[i - 1].CompareTag("e") ||
+                    newCurrentBlocks[i - 1].CompareTag("π") ||
+                    newCurrentBlocks[i - 1].CompareTag("Log (") ||
+                    newCurrentBlocks[i - 1].CompareTag("Expr (") ||
+                    newCurrentBlocks[i - 1].CompareTag("z") ||
+                    newCurrentBlocks[i - 1].CompareTag("(") ||
+                    newCurrentBlocks[i - 1].CompareTag("Sqrt (") ||
+                    newCurrentBlocks[i - 1].CompareTag("Trig")))
+                {
+                    AddToExpr("*", true);
+                }
+                //END HANDLING ADDING * FOR DIGITS
             }
             else if (newCurrentBlocks[i].CompareTag("."))
             {
@@ -287,11 +304,37 @@ public class TakeInput : MonoBehaviour
                 AddToExpr(thing[1].gameObject.tag, true);
                 digit = false;
             }
-            //All others
-            else { 
+            else {
                 AddToExpr(newCurrentBlocks[i].tag, true);
                 digit = false;
             }
+            //HANDLE ADDING "*" in cases like y x -> y * x for everything but digits (digits are handled above
+            if (i - 1 >= 0 && //don't go outta bounds boi
+                (newCurrentBlocks[i].CompareTag("x") ||
+                newCurrentBlocks[i].CompareTag("y") ||
+                newCurrentBlocks[i].CompareTag("z") ||
+                newCurrentBlocks[i].CompareTag(")") ||
+                newCurrentBlocks[i].CompareTag("π") ||
+                newCurrentBlocks[i].CompareTag("e")))
+            {
+                //check if the next thing will be something that we need to add * for
+                if (newCurrentBlocks[i - 1].CompareTag("x") ||
+                    newCurrentBlocks[i - 1].CompareTag("y") ||
+                    newCurrentBlocks[i - 1].CompareTag("e") ||
+                    newCurrentBlocks[i - 1].CompareTag("π") ||
+                    newCurrentBlocks[i - 1].CompareTag("Log (") ||
+                    newCurrentBlocks[i - 1].CompareTag("Expr (") ||
+                    newCurrentBlocks[i - 1].CompareTag("z") ||
+                    newCurrentBlocks[i - 1].CompareTag("(") ||
+                    newCurrentBlocks[i - 1].CompareTag("Sqrt (") ||
+                    newCurrentBlocks[i - 1].CompareTag("Trig") ||
+                    newCurrentBlocks[i - 1].CompareTag("Digit"))
+                {
+                    AddToExpr("*", true);
+                }
+            }
+            //END HANDING OF "*"
+            //All others
         }
         string finalString = expr.Replace("div", "/");
         Debug.Log(finalString);

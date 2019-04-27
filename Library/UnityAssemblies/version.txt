@@ -67,9 +67,9 @@ C:/Program Files/Unity/Hub/Editor/2018.3.12f1/Editor/Data/UnityExtensions/Unity/
 C:/Program Files/Unity/Hub/Editor/2018.3.12f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
 C:/Program Files/Unity/Hub/Editor/2018.3.12f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll
 C:/Program Files/Unity/Hub/Editor/2018.3.12f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll
-C:/Users/Matthew/Documents/Unity/GitHub/VR Math Functions/Bitcamp 2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll
-C:/Users/Matthew/Documents/Unity/GitHub/VR Math Functions/Bitcamp 2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll
-C:/Users/Matthew/Documents/Unity/GitHub/VR Math Functions/Bitcamp 2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll
+C:/Users/Matthew/Documents/Unity/GitHub/VR Math Functions/Bitcamp 2019/Bitcamp 2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll
+C:/Users/Matthew/Documents/Unity/GitHub/VR Math Functions/Bitcamp 2019/Bitcamp 2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll
+C:/Users/Matthew/Documents/Unity/GitHub/VR Math Functions/Bitcamp 2019/Bitcamp 2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll
 C:\Program Files\Unity\Hub\Editor\2018.3.12f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll
 C:\Program Files\Unity\Hub\Editor\2018.3.12f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\Microsoft.Win32.Primitives.dll
 C:\Program Files\Unity\Hub\Editor\2018.3.12f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.AppContext.dll
@@ -195,8 +195,8 @@ C:/Program Files/Unity/Hub/Editor/2018.3.12f1/Editor/Data/Managed/UnityEditor.Gr
 C:/Program Files/Unity/Hub/Editor/2018.3.12f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.WSA.Extensions.dll
 C:/Program Files/Unity/Hub/Editor/2018.3.12f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
 C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
-C:/Users/Matthew/Documents/Unity/GitHub/VR Math Functions/Bitcamp 2019/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
-C:/Users/Matthew/Documents/Unity/GitHub/VR Math Functions/Bitcamp 2019/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll
+C:/Users/Matthew/Documents/Unity/GitHub/VR Math Functions/Bitcamp 2019/Bitcamp 2019/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
+C:/Users/Matthew/Documents/Unity/GitHub/VR Math Functions/Bitcamp 2019/Bitcamp 2019/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll
 C:\Program Files\Unity\Hub\Editor\2018.3.12f1\Editor\Data\Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll
 C:/Program Files/Unity/Hub/Editor/2018.3.12f1/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll
 C:/Program Files/Unity/Hub/Editor/2018.3.12f1/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll

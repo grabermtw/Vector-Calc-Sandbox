@@ -14,10 +14,13 @@ public class Plot3D : MonoBehaviour
     public TakeInput takeInput;
     public GameObject pointer1;
     public GameObject pointer2;
+    public Vector2 plotDimensions;
+    public GameObject ErrorText;
 
-
-    private int zSize;
-    private int xSize;
+    [HideInInspector]
+    public int zSize;
+    [HideInInspector]
+    public int xSize;
     private calculus calc;
 
     Mesh mesh;
@@ -42,7 +45,7 @@ public class Plot3D : MonoBehaviour
 
     private void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Two))
+        if (OVRInput.GetDown(OVRInput.Button.One))
         {
             func = takeInput.GetExpr();
             PlotFunction();
@@ -66,8 +69,15 @@ public class Plot3D : MonoBehaviour
         {
             for (int z = 0; z < zSize; z++)
             {
-                vertices[i] = new Vector3(x / horizontalScale, calc.stringyEvaluate(func, xDomain.x + x * resolution, yDomain.x + z * resolution) / verticalScale, z / horizontalScale);
-                i++;
+                try
+                {
+                    vertices[i] = new Vector3(x * (plotDimensions.x / xSize), calc.stringyEvaluate(func, xDomain.x + x * resolution, yDomain.x + z * resolution) / verticalScale, z * (plotDimensions.y / zSize));
+                }
+                catch(System.FormatException e)
+                {
+                    StartCoroutine("DisplayErrorText");
+                }
+                    i++;
             }
         }
 
@@ -126,5 +136,12 @@ public class Plot3D : MonoBehaviour
     {
         float num = Mathf.Sin(x) + Mathf.Cos(y);
         return num;
+    }
+
+    IEnumerator DisplayErrorText ()
+    {
+        ErrorText.SetActive(true);
+        yield return new WaitForSeconds(3);
+        ErrorText.SetActive(false);
     }
 }
