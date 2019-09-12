@@ -42,6 +42,8 @@ The vector field simulator allows the user to select from one of 13 preset vecto
 Three days after our project, Mathematics released Version 12, and Unity released Mathematica integration. With the two pieces of software being able to communicate, much of what we implemented in the project would become much simpler to implement by using Mathematica to solve and derive expressions, render surfaces, amongst other aspects. Our project was in effect a prototype for this integration, which coincidentally came out directly after it would have been useful to us. We mention the timing of the release of these updates as someone who is familiar with these pieces of software may notice that there are, now, easier ways to implement parts of our project.
 
 ### Project Links
-YouTube Demonstration: https://www.youtube.com/watch?v=PjyebX9fSOg&t=
+YouTube Demonstration: https://www.youtube.com/watch?v=PjyebX9fSOg&t
+
 Devpost Project Description: https://devpost.com/software/vector-calc-sandbox
+
 Bitcamp 2019 Competition: https://bit.camp/
