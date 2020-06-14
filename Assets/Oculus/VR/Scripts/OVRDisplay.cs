@@ -103,6 +103,7 @@ public class OVRDisplay
 	private EyeRenderDesc[] eyeDescs = new EyeRenderDesc[2];
 	private bool recenterRequested = false;
 	private int recenterRequestedFrameCount = int.MaxValue;
+	private int localTrackingSpaceRecenterCount = 0;
 
 	/// <summary>
 	/// Creates an instance of OVRDisplay. Called by OVRManager.
@@ -121,12 +122,28 @@ public class OVRDisplay
 
 		if (recenterRequested && Time.frameCount > recenterRequestedFrameCount)
 		{
+			Debug.Log("Recenter event detected");
 			if (RecenteredPose != null)
 			{
 				RecenteredPose();
 			}
 			recenterRequested = false;
 			recenterRequestedFrameCount = int.MaxValue;
+		}
+
+		if (OVRPlugin.GetSystemHeadsetType() >= OVRPlugin.SystemHeadset.Oculus_Quest && 
+			OVRPlugin.GetSystemHeadsetType() < OVRPlugin.SystemHeadset.Rift_DK1) // all Oculus Standalone headsets
+		{
+			int recenterCount = OVRPlugin.GetLocalTrackingSpaceRecenterCount();
+			if (localTrackingSpaceRecenterCount != recenterCount)
+			{
+				Debug.Log("Recenter event detected");
+				if (RecenteredPose != null)
+				{
+					RecenteredPose();
+				}
+				localTrackingSpaceRecenterCount = recenterCount;
+			}
 		}
 	}
 

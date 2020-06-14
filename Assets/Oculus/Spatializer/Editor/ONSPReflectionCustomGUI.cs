@@ -1,3 +1,23 @@
+/************************************************************************************
+Filename    :   ONSPReflectionCustomGUI.cs
+Content     :   GUI for Oculus Spatializer mixer effect
+Copyright   :   Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Licensed under the Oculus SDK Version 3.5 (the "License"); 
+you may not use the Oculus SDK except in compliance with the License, 
+which is provided at the time of installation or download, or which 
+otherwise accompanies this software in either electronic or hard copy form.
+
+You may obtain a copy of the License at
+
+https://developer.oculus.com/licenses/sdk-3.5/
+
+Unless required by applicable law or agreed to in writing, the Oculus SDK 
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+************************************************************************************/
 using UnityEditor;
 using UnityEngine;
 using System.Runtime.InteropServices;
@@ -22,7 +42,16 @@ public class OculusSpatializerReflectionCustomGUI : IAudioEffectPluginGUI
     public override bool OnGUI(IAudioEffectPlugin plugin)
     {
 		float fval = 0.0f;
-		bool  bval = false;
+        bool bval = false;
+
+        Separator();
+        Label("Voice limit (1 - 1024)");
+        ONSPSettings.Instance.voiceLimit = EditorGUILayout.IntField(" ", ONSPSettings.Instance.voiceLimit);
+        if (GUI.changed)
+        {
+            GUI.changed = false;
+            EditorUtility.SetDirty(ONSPSettings.Instance);
+        }
 
 		Separator();
 		Label ("GLOBAL SCALE (0.00001 - 10000.0)");
